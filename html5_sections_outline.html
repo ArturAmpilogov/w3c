@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+</head>
+<style>
+/* 
+  HTML section outline is used heavily for voice assistance and web engine parsers.
+  See https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+  
+  For a voice-over-text sections require <h_> tag. Such tags often should not be visible for average users.
+  The solution is to minimize the tag and move it out of visible html area.
+  Based on the Google's main page and https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/ */
+.section-name {
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    z-index: -1000;
+    -webkit-user-select: none;
+}
+</style>
+<body>
+<header>
+	<h1 class="section-name">Page Title</span></h1>
+</header>
+<nav>
+  <header>
+    <h2>Navigation menu</h2>
+  </header>
+	<ul>
+		<li><span>This page</span></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</nav>
+<main>
+  <header>    
+    <h1>Article title</h1>    
+   </header>
+   <!-- Content can be wrapped in div for grouping. Div tag does not affect sections, it works as flow element -->
+   <div>
+      <p>Some content that can optionaly be enclosed in <section>s and <article>s.
+      <section> 
+         <h2>Subsection 1</h2>
+         <p> Subsection 1 content</p>
+      <section>
+      <section> 
+         <h2>Subsection 2</h2>
+         <p> Subsection 2 content</p>
+      <section>
+    </div>
+</main>
+<!-- aside is bound to its parent here - the "body" tag, and works aside of the main tag -->
+<aside>
+  <h1 class="section-name">Advertisement</h1>
+	   <div><p>Some advertisement</p><p>...<p></div>
+</aside>
+<footer>
+	<p>&copy; 2021 Aha-aha</p>
+</footer>
+</body>
+</html>
