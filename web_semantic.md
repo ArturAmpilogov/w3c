@@ -11,7 +11,7 @@
   - location
   - organazer name, profession, personal links
 
-## Guides for HTML semantics
-
-- https://schema.org/docs/gs.html
+## Guides for HTML semantics and microdata
 - https://developers.google.com/search/docs/guides/intro-structured-data
+- https://schema.org/docs/gs.html
+- https://webcode.tools/microdata-generator
